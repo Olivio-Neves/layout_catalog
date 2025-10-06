@@ -1,8 +1,9 @@
+@import '../variables/variables';
 .card {
-  width: 200px;
+  width: $card-width;
   font-family: Roboto, sans-serif;
   border: 1px solid #eceaea;
-  border-radius: 5px;
+  border-radius: $card-border-radius;
   transition: 300ms;
 
   &__img {
@@ -35,11 +36,11 @@
       display: flex;
       justify-content: space-between;
 
-      .stars {
+      .card__stars {
         display: flex;
         margin-top: 8px;
 
-        .star-active {
+        .card__stars-item--active {
           background-image: url(../images/star-active.svg);
           width: 12px;
           height: 12px;
@@ -47,7 +48,7 @@
           margin-right: 8px;
         }
 
-        .star {
+        .card__stars-item {
           background-image: url(../images/star.svg);
           width: 12px;
           height: 12px;
@@ -55,7 +56,7 @@
         }
       }
 
-      .reviews {
+      .card__reviews {
         margin-top: -2px;
         font-size: 10px;
         font-weight: 400;
@@ -68,14 +69,14 @@
       justify-content: space-between;
       margin-top: -4px;
 
-      .price-text {
+      .card__price-text {
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
         margin-top: 6px;
       }
 
-      .price-number {
+      .card__price-number {
         font-size: 16px;
         font-weight: 700;
         line-height: 18px;
@@ -86,7 +87,7 @@
       display: flex;
       margin-top: 2px;
 
-      .buy {
+      .card__buy {
         flex-grow: 1;
         background-color: #00acdc;
         color: white;
@@ -107,10 +108,13 @@
   }
 }
 
-.card:hover .card__menu-description {
-  color: #34568b;
+.card:hover .card__title {
+  color: $color-card-title-hover;
 }
 
 .card:hover {
-  transform: scale(120%);
+  transform: scale(1.2);
+  transition: transform 300ms;
+  z-index: 1;
+  transform-origin: center;
 }
