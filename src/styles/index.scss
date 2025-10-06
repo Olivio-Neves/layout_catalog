@@ -9,7 +9,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px 46px;
-  justify-content: center;
-  align-items: center;
+  justify-content: $flex-justify-center;
+  align-items: $flex-align-center;
   padding: 50px 40px;
 }
